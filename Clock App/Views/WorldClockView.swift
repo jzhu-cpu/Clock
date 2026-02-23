@@ -12,6 +12,27 @@ struct WorldClockView: View {
         NavigationStack {
             Text("WorldClock")
                 .navigationTitle("WorldClock")
+                .toolbar {
+                    
+                    ToolbarItem(placement: .topBarLeading) {
+                        
+                        Button("Edit") {
+                            // Does nothing right now
+                        }
+                        
+                    }
+                    
+                    ToolbarItem(placement: .primaryAction) {
+                        
+                        Button {
+                            // Does nothing right now
+                        } label: {
+                            Image(systemName:"plus")
+                        }
+                        
+                    }
+                    
+                }
         }
     }
 }
