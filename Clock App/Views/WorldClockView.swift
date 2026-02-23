@@ -10,29 +10,50 @@ import SwiftUI
 struct WorldClockView: View {
     var body: some View {
         NavigationStack {
-            Text("WorldClock")
-                .navigationTitle("WorldClock")
-                .toolbar {
-                    
-                    ToolbarItem(placement: .topBarLeading) {
-                        
-                        Button("Edit") {
-                            // Does nothing right now
-                        }
-                        
+            VStack {
+                //Beijing
+                HStack {
+                    //Left Side
+                    VStack {
+                        Text("Today, +0HRS")
+                        Text("Beijing")
+                            .font(.system(.largeTitle, design: .default,weight: .thin))
                     }
                     
-                    ToolbarItem(placement: .primaryAction) {
-                        
-                        Button {
-                            // Does nothing right now
-                        } label: {
-                            Image(systemName:"plus")
-                        }
-                        
+                    Spacer()
+                    
+                    //Right side
+                    Text("4:03")
+                        .font(.system(size: 64.0, weight: .thin, design: .default))
+                    Text("AM")
+                        .font(.system(.largeTitle,design: .default,weight: .thin))
+                    
+                    
+                }
+            }
+            .navigationTitle("World Clock")
+            .toolbar {
+                
+                ToolbarItem(placement: .topBarLeading) {
+                    
+                    Button("Edit") {
+                        // Does nothing right now
                     }
                     
                 }
+                
+                
+                ToolbarItem(placement: .primaryAction) {
+                    
+                    Button {
+                        // Does nothing right now
+                    } label: {
+                        Image(systemName:"plus")
+                    }
+                    
+                }
+                
+            }
         }
     }
 }
