@@ -30,32 +30,56 @@ struct WorldClockView: View {
                     
                     
                 }
-            }
-            .navigationTitle("World Clock")
-            .toolbar {
                 
-                ToolbarItem(placement: .topBarLeading) {
+                VStack {
+                    //Toronto
+                    HStack {
+                        //Left Side
+                        VStack {
+                            Text("Today, +13HRS")
+                            Text("Toronto")
+                                .font(.system(.largeTitle, design: .default,weight: .thin))
+                        }
+                        
+                        Spacer()
+                        
+                        //Right side
+                        Text("15:03")
+                            .font(.system(size: 64.0, weight: .thin, design: .default))
+                        Text("PM")
+                            .font(.system(.largeTitle,design: .default,weight: .thin))
+                        
+                        
+                    }
+                }
+                .navigationTitle("World Clock")
+                .toolbar {
                     
-                    Button("Edit") {
-                        // Does nothing right now
+                    ToolbarItem(placement: .topBarLeading) {
+                        
+                        Button("Edit") {
+                            // Does nothing right now
+                        }
+                        
+                    }
+                    
+                    
+                    ToolbarItem(placement: .primaryAction) {
+                        
+                        Button {
+                            // Does nothing right now
+                        } label: {
+                            Image(systemName:"plus")
+                        }
+                        
                     }
                     
                 }
-                
-                
-                ToolbarItem(placement: .primaryAction) {
-                    
-                    Button {
-                        // Does nothing right now
-                    } label: {
-                        Image(systemName:"plus")
-                    }
-                    
-                }
-                
             }
         }
     }
+    
+   
 }
 
 #Preview {
